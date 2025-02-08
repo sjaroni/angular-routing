@@ -17,10 +17,12 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    title: 'Title dashboard',
   },
   {
     path: 'products',
     component: ProductsComponent,
+    title: 'Title products',
     // Lazy Loading Component
     // loadComponent: () =>
     //   import('./products/products.component').then((c) => c.ProductsComponent),
@@ -28,6 +30,7 @@ export const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
+    title: 'Title settings',
     children: [
       {
         path: 'profile',
