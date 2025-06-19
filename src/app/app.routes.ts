@@ -7,6 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SettingsProfileComponent } from './settings/settings-profile/settings-profile.component';
 import { authGuard } from './auth.guard';
 import { pageResolver } from './data.resolver';
+import { PrivateComponent } from './private/private.component';
 
 export const routes: Routes = [
   {
@@ -51,6 +52,10 @@ export const routes: Routes = [
     redirectTo: (route) => {
       return `/pages/${route.params['pageId']}`;
     },
+  },
+  {
+    path: 'private',
+    component: PrivateComponent
   },
   {
     path: '**',
